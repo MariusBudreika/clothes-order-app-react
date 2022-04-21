@@ -1,0 +1,37 @@
+.button {
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #973AA8;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+
+    &:hover, &:active {
+        background-color: #C05299;
+        box-shadow: rgba(202, 198, 228, 0.5) 0 1px 10px;
+        transition-duration: .1s;
+}
+    &IconContainer {
+        display: flex;
+        color: white;
+        margin-right: 0.5rem;
+    }
+
+    &Icon {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    &Counter {
+        margin-left: 0.5rem;
+    }
+}
+
+
+
+
+  
