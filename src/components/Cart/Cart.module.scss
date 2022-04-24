@@ -1,0 +1,35 @@
+@import '../../../styles/mixins/mixins';
+
+.cart {
+    &Total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    &Btns {
+        text-align: right; 
+        
+        &Close {
+            @include button-style;
+            background-color: #973AA8;
+        }
+
+        &Order {
+            @include button-style;
+            margin-left: 1rem;
+            background-color: #6411AD;
+        }
+    }    
+
+  }
+
+  .item {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 1rem;
+  }
