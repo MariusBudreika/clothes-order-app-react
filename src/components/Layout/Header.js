@@ -1,5 +1,5 @@
 import clothesImage from "../../assets/clothes.jpg";
-import Button from "../UI/Button";
+import Button from "../Cart/Button";
 import styles from "./Header.module.scss";
 
 const Header = (props) => {
