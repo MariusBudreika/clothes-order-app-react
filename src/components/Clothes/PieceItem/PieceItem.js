@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+
 import styles from "./PieceItem.module.scss";
 import PieceItemForm from "./PieceItemForm";
+import CartContext from "../../../assets/store/cart-context";
 
 const PieceItem = (props) => {
+  const cartCtx = useContext(CartContext);
+
   const price = `$${props.price.toFixed(2)}`;
+
+  const addToCartHandler = (amount) => {
+    cartCtx.addItem({
+      id: props.id,
+      name: props.name,
+      amount: amount,
+      price: props.price,
+    });
+  };
 
   return (
     <li>
@@ -13,7 +26,7 @@ const PieceItem = (props) => {
         <div className={styles.pieceContainer}>
           <div className={styles.piecePrice}>{price}</div>
           <div className={styles.pieceForm}>
-            <PieceItemForm />
+            <PieceItemForm onAddToCart={addToCartHandler} />
           </div>
         </div>
       </div>
