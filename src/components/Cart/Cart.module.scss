@@ -1,6 +1,7 @@
 @import '../../../styles/mixins/mixins';
 
 .cart {
+
     &Total {
         display: flex;
         justify-content: space-between;
@@ -32,4 +33,6 @@
       margin: 0;
       padding: 0;
       margin-bottom: 1rem;
+      max-height: 20rem;
+      overflow: auto;
   }
